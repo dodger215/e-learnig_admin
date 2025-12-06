@@ -17,7 +17,7 @@ class SocketService {
       return this.socket;
     }
 
-    const socketUrl ='http://localhost:5000';
+    const socketUrl = 'https://e-learnig-backend.onrender.com';
 
     this.socket = io(socketUrl, {
       auth: { token },
