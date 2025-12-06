@@ -1,0 +1,206 @@
+/* Global Layout Fixes */
+.ant-layout {
+  background: #f0f2f5 !important;
+}
+
+.ant-layout-sider {
+  background: #001529 !important;
+}
+
+.ant-layout-header {
+  background: #fff !important;
+  padding: 0 24px !important;
+  height: 64px !important;
+  line-height: 64px !important;
+}
+
+/* Fix content alignment */
+.ant-layout-content {
+  min-height: calc(100vh - 64px) !important;
+  padding: 24px !important;
+  margin: 0 !important;
+  background: #f0f2f5 !important;
+}
+
+/* Card and content containers */
+.ant-card {
+  border-radius: 8px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table fixes */
+.ant-table {
+  background: #fff !important;
+}
+
+.ant-table-container {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+/* Fix sidebar content alignment */
+.ant-menu-dark {
+  background: #001529 !important;
+}
+
+.ant-menu-dark .ant-menu-item-selected {
+  background-color: #1890ff !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 1000;
+    height: 100vh;
+  }
+  
+  .ant-layout {
+    margin-left: 0 !important;
+  }
+  
+  .ant-layout-content {
+    padding: 16px !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+#root {
+  height: 100%;
+}
+
+/* Ant Design overrides */
+.ant-layout {
+  min-height: 100vh;
+  background: #f0f2f5 !important;
+}
+
+.ant-layout-sider {
+  background: #001529 !important;
+  height: 100vh !important;
+}
+
+.ant-layout-sider-children {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ant-menu {
+  flex: 1;
+  overflow: auto;
+}
+
+.ant-layout-header {
+  background: #fff !important;
+  height: 64px !important;
+  line-height: 64px !important;
+  padding: 0 24px !important;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 9;
+}
+
+.ant-layout-content {
+  background: #f0f2f5 !important;
+  padding: 24px !important;
+  min-height: calc(100vh - 64px) !important;
+}
+
+/* Content container */
+.content-container {
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 112px); /* 64px header + 48px padding */
+}
+
+/* Card styling */
+.ant-card {
+  border-radius: 8px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table styling */
+.ant-table-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .ant-layout-sider {
+    position: fixed !important;
+    z-index: 1000;
+  }
+  
+  .ant-layout {
+    margin-left: 0 !important;
+  }
+  
+  .ant-layout-content {
+    padding: 16px !important;
+  }
+  
+  .content-container {
+    padding: 16px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}

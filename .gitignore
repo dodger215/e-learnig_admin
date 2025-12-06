@@ -1,0 +1,184 @@
+# .gitignore
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+.nyc_output
+
+# Build output
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+
+# Compiled files
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+__pycache__/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Testing
+.nyc_output/
+coverage/
+
+# Backend specific
+uploads/
+!uploads/.gitkeep
+tmp/
+temp/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Docker
+# .dockerignore
+# Dockerfile
+# docker-compose.yml
+# docker-compose.*.yml
+# docker-compose.*.yaml
+# docker-compose.override.yml
+
+# SSL certificates
+*.pem
+*.key
+*.crt
+
+# Documentation
+docs/_build/
+
+# Backend logs
+access.log
+error.log
+
+# Frontend (Vite/React)
+.cache/
+.vite/
+.env
+
+# ESLint/Prettier
+.eslintcache
+.prettierignore
+
+# Editor
+.editorconfig
+
+# Local development config
+config/local.json
+config/development.json
+config/staging.json
+
+# Secrets
+secrets/
+credentials/
+keys/
+
+# Temporary files
+.tmp/
+.temp/
+
+# Backup files
+*.bak
+*.backup
+
+# OS-specific files
+# Windows
+[Pp]ower[Ll]ogs/
+[Pp]ower[Ss]hell/
+[Pp]ower[Ss]hell[Cc]ore/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vim
+*.swp
+*.swo
+
+# System
+.history/
+.system/
+
+# Package manager specific
+# npm
+package-lock.json
+.npmrc
+
+# Yarn
+.yarn/
+.yarnrc
+yarn.lock
+
+# pnpm
+pnpm-lock.yaml
+
+# Bun
+bun.lockb
+
+# Custom project files
+# Add any project-specific files/directories here
