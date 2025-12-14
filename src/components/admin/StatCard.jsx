@@ -7,16 +7,16 @@ import {
 } from '@ant-design/icons';
 import PropTypes from 'prop-types';
 
-const StatCard = ({ 
-  title, 
-  value, 
-  icon, 
-  color, 
-  trend, 
-  trendLabel, 
-  loading, 
+const StatCard = ({
+  title,
+  value,
+  icon,
+  color,
+  trend,
+  trendLabel,
+  loading,
   tooltip,
-  onClick 
+  onClick
 }) => {
   const getTrendIcon = () => {
     if (trend > 0) {
@@ -37,11 +37,11 @@ const StatCard = ({
   };
 
   return (
-    <Card 
-      hoverable 
+    <Card
+      hoverable
       loading={loading}
       onClick={onClick}
-      style={{ 
+      style={{
         cursor: onClick ? 'pointer' : 'default',
         transition: 'all 0.3s',
         borderRadius: '12px',
@@ -51,15 +51,15 @@ const StatCard = ({
     >
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
         <div>
-          <div style={{ 
-            display: 'flex', 
-            alignItems: 'center', 
-            marginBottom: 8 
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            marginBottom: 8
           }}>
-            <span style={{ 
-              fontSize: 14, 
-              color: '#666', 
-              marginRight: 4 
+            <span style={{
+              fontSize: 14,
+              color: '#666',
+              marginRight: 4
             }}>
               {title}
             </span>
@@ -69,19 +69,21 @@ const StatCard = ({
               </Tooltip>
             )}
           </div>
-          
+
           <Statistic
             value={value}
-            valueStyle={{ 
-              fontSize: 28, 
-              fontWeight: 600,
-              color: color || '#1890ff'
+            styles={{
+              content: {
+                fontSize: 28,
+                fontWeight: 600,
+                color: color || '#1890ff'
+              }
             }}
           />
-          
+
           {trend !== undefined && (
-            <div style={{ 
-              marginTop: 8, 
+            <div style={{
+              marginTop: 8,
               fontSize: 12,
               display: 'flex',
               alignItems: 'center',
@@ -95,7 +97,7 @@ const StatCard = ({
             </div>
           )}
         </div>
-        
+
         <div style={{
           width: 48,
           height: 48,

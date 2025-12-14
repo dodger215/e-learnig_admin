@@ -66,7 +66,7 @@ const Dashboard = () => {
       dataIndex: 'status',
       key: 'status',
       render: (status) => (
-        <span style={{ 
+        <span style={{
           color: status === 'active' ? '#52c41a' : '#ff4d4f',
           fontWeight: 'bold'
         }}>
@@ -169,10 +169,10 @@ const Dashboard = () => {
       <Row gutter={[16, 16]} style={{ marginTop: 24 }}>
         <Col xs={24} lg={12}>
           <Card title="Recently Added Courses">
-            <Space direction="vertical" style={{ width: '100%' }}>
+            <Space orientation="vertical" style={{ width: '100%' }}>
               {stats.recentCourses.map((course) => (
                 <Card key={course.id} size="small">
-                  <Space direction="vertical" style={{ width: '100%' }}>
+                  <Space orientation="vertical" style={{ width: '100%' }}>
                     <strong>{course.title}</strong>
                     <div style={{ color: '#666' }}>{course.tutorName}</div>
                     <Space>
@@ -185,10 +185,10 @@ const Dashboard = () => {
             </Space>
           </Card>
         </Col>
-        
+
         <Col xs={24} lg={12}>
           <Card title="Quick Actions">
-            <Space direction="vertical" style={{ width: '100%' }}>
+            <Space orientation="vertical" style={{ width: '100%' }}>
               <Button type="primary" block>
                 Create New Course
               </Button>

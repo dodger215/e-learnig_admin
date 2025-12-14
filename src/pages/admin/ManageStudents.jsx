@@ -105,7 +105,7 @@ const ManageStudents = () => {
     } else if (activeTab === 'new') {
       const sevenDaysAgo = new Date();
       sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-      filtered = filtered.filter(student => 
+      filtered = filtered.filter(student =>
         new Date(student.createdAt) > sevenDaysAgo
       );
     }
@@ -282,7 +282,7 @@ const ManageStudents = () => {
               <Statistic
                 title="Total Students"
                 value={stats.total}
-                valueStyle={{ color: '#1890ff' }}
+                styles={{ content: { color: '#1890ff' } }}
                 prefix={<UserOutlined />}
               />
             </Card>
@@ -292,7 +292,7 @@ const ManageStudents = () => {
               <Statistic
                 title="Active Students"
                 value={stats.active}
-                valueStyle={{ color: '#52c41a' }}
+                styles={{ content: { color: '#52c41a' } }}
                 prefix={<CheckCircleOutlined />}
               />
             </Card>
@@ -302,7 +302,7 @@ const ManageStudents = () => {
               <Statistic
                 title="Enrolled Students"
                 value={stats.enrolled}
-                valueStyle={{ color: '#faad14' }}
+                styles={{ content: { color: '#faad14' } }}
                 prefix={<BookOutlined />}
               />
             </Card>
@@ -312,7 +312,7 @@ const ManageStudents = () => {
               <Statistic
                 title="Total Revenue"
                 value={`₵${stats.totalRevenue.toLocaleString()}`}
-                valueStyle={{ color: '#722ed1' }}
+                styles={{ content: { color: '#722ed1' } }}
                 prefix={<DollarOutlined />}
               />
             </Card>
@@ -479,7 +479,7 @@ const ManageStudents = () => {
 
               <Col span={12}>
                 <Card title="Enrollment Stats" size="small">
-                  <Space direction="vertical" style={{ width: '100%' }}>
+                  <Space orientation="vertical" style={{ width: '100%' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                       <span>Active Courses:</span>
                       <strong>{selectedStudent.activeEnrollments || 0}</strong>
@@ -498,10 +498,10 @@ const ManageStudents = () => {
 
               <Col span={12}>
                 <Card title="Recent Activity" size="small">
-                  <Space direction="vertical" style={{ width: '100%' }}>
+                  <Space orientation="vertical" style={{ width: '100%' }}>
                     <div style={{ fontSize: 12, color: '#666' }}>
-                      Last login: {selectedStudent.lastLogin ? 
-                        new Date(selectedStudent.lastLogin).toLocaleString() : 
+                      Last login: {selectedStudent.lastLogin ?
+                        new Date(selectedStudent.lastLogin).toLocaleString() :
                         'Never'
                       }
                     </div>
@@ -518,7 +518,7 @@ const ManageStudents = () => {
               {selectedStudent.enrolledCourses && selectedStudent.enrolledCourses.length > 0 && (
                 <Col span={24}>
                   <Card title="Enrolled Courses" size="small">
-                    <Space direction="vertical" style={{ width: '100%' }}>
+                    <Space orientation="vertical" style={{ width: '100%' }}>
                       {selectedStudent.enrolledCourses.slice(0, 3).map((course, index) => (
                         <div
                           key={index}

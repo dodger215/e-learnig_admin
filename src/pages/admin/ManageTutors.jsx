@@ -155,7 +155,7 @@ const ManageTutors = () => {
       width: 200,
       render: (text, record) => (
         <Space>
-          <Avatar src={record.avatar} icon={<UserOutlined />} />
+          {/* <Avatar src={record.avatar} icon={<UserOutlined />} /> */}
           <div>
             <div style={{ fontWeight: 500 }}>{text}</div>
             <div style={{ fontSize: 12, color: '#666' }}>{record.email}</div>

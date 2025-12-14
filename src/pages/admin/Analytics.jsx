@@ -415,7 +415,7 @@ const Analytics = () => {
       {/* Real-time Updates */}
       {notifications.length > 0 && (
         <Card title="Recent Activity" style={{ marginTop: 24 }}>
-          <Space direction="vertical" style={{ width: '100%' }}>
+          <Space orientation="vertical" style={{ width: '100%' }}>
             {notifications.slice(0, 5).map((note, index) => (
               <div
                 key={index}
@@ -423,11 +423,10 @@ const Analytics = () => {
                   padding: 12,
                   background: '#fafafa',
                   borderRadius: 6,
-                  borderLeft: `4px solid ${
-                    note.type === 'NEW_COURSE' ? '#1890ff' :
-                    note.type === 'NEW_ENROLLMENT' ? '#52c41a' :
-                    note.type === 'NEW_PAYMENT' ? '#722ed1' : '#faad14'
-                  }`,
+                  borderLeft: `4px solid ${note.type === 'NEW_COURSE' ? '#1890ff' :
+                      note.type === 'NEW_ENROLLMENT' ? '#52c41a' :
+                        note.type === 'NEW_PAYMENT' ? '#722ed1' : '#faad14'
+                    }`,
                 }}
               >
                 <div style={{ display: 'flex', justifyContent: 'space-between' }}>

@@ -144,7 +144,7 @@ const Payments = () => {
     try {
       // Simulate export process
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
+
       // In a real app, this would trigger a file download
       const csvContent = generateCSV(filteredPayments);
       const blob = new Blob([csvContent], { type: 'text/csv' });
@@ -153,7 +153,7 @@ const Payments = () => {
       a.href = url;
       a.download = `payments_${new Date().toISOString().split('T')[0]}.csv`;
       a.click();
-      
+
       message.success('Export completed successfully');
     } catch (error) {
       message.error('Export failed');
@@ -319,7 +319,7 @@ const Payments = () => {
               <Statistic
                 title="Total Revenue"
                 value={`₵${stats.totalRevenue?.toLocaleString() || '0'}`}
-                valueStyle={{ color: '#52c41a' }}
+                styles={{ content: { color: '#52c41a' } }}
                 prefix={<DollarOutlined />}
               />
             </Card>
@@ -329,7 +329,7 @@ const Payments = () => {
               <Statistic
                 title="Successful Payments"
                 value={stats.successfulPayments || 0}
-                valueStyle={{ color: '#1890ff' }}
+                styles={{ content: { color: '#1890ff' } }}
                 prefix={<CheckCircleOutlined />}
               />
             </Card>
@@ -339,7 +339,7 @@ const Payments = () => {
               <Statistic
                 title="Pending Payments"
                 value={stats.pendingPayments || 0}
-                valueStyle={{ color: '#faad14' }}
+                styles={{ content: { color: '#faad14' } }}
                 prefix={<ClockCircleOutlined />}
               />
             </Card>
@@ -349,7 +349,7 @@ const Payments = () => {
               <Statistic
                 title="Failed Payments"
                 value={stats.failedPayments || 0}
-                valueStyle={{ color: '#ff4d4f' }}
+                styles={{ content: { color: '#ff4d4f' } }}
                 prefix={<CloseCircleOutlined />}
               />
             </Card>
